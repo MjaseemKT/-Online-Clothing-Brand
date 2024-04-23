@@ -1,0 +1,17 @@
+<div class="popup-overlay">
+  <div class="product-details-popup">
+   
+    <div *ngIf="selectedProduct" class="product-details">
+      <div class="product-image">
+        <div *ngFor="let img of selectedProduct.images">
+          <img [src]="img" alt="Image" class="zoom-img fixed-size-image">
+        </div>
+      </div>
+
+    
+      
+     
+      <button class="cancel-button btn btn-info btn-block btn-lg" (click)="onCancelClick()">Cancel</button>
+    </div>
+  </div>
+</div>

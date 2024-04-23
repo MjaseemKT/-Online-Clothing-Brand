@@ -1,0 +1,36 @@
+.form-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .card {
+    border-radius: 15px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5);
+  }

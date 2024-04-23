@@ -1,0 +1,47 @@
+.receipt {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .receipt-items {
+    border-bottom: 1px dashed #333; /* Darker dashed line */
+    margin-bottom: 20px;
+  }
+  
+  .receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .item-name {
+    font-weight: bold;
+    color: #333; 
+  }
+  
+  .item-quantity, .item-price {
+    flex-shrink: 0;
+    color: #ffda06; 
+  }
+  
+  .receipt-total {
+    text-align: right;
+    font-weight: bold;
+    color: #a72828; 
+  }
+  
+
+  

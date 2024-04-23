@@ -1,0 +1,29 @@
+.product-image {
+  max-width: 100px; 
+  height: auto;
+}
+.wishlist-section {
+    background-color: #eee;
+}
+
+.wishlist-item {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.text-muted {
+    color: #888;
+}
+
+.text-danger:hover {
+    color: #ff4444;
+}

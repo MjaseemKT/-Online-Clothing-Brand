@@ -1,0 +1,162 @@
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <a class="w3-bar-item w3-button w3-padding-large " (click)="gotoadmin()">
+        <p style="color: aliceblue;"><i>MEN STORE</i></p>
+    </a>
+    <a class="w3-bar-item w3-button w3-padding-large " (click)="gotoadminw()">
+        <p style="color: aliceblue;"><i>WOMEN STORE</i></p>
+    </a>
+    <a class="w3-bar-item w3-button w3-padding-large " (click)="gotoorder()">
+        <p style="color: aliceblue;"><i>ORDER DETAILS</i></p>
+    </a>
+</nav>
+
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a  class="w3-bar-item w3-button" style="width:25% !important" (click)="gotoadmin()"><i>MEN STORE</i></a>
+        <a class="w3-bar-item w3-button" style="width:25% !important" (click)="gotoadminw()"><i>WOMEN STORE</i></a>
+        <a  class="w3-bar-item w3-button" style="width:25% !important" (click)="gotoorder()"><i>ORDER DETAILS</i></a>
+    </div>
+</div>
+<br><br>
+
+
+
+<div class="w3-padding-large" id="main">
+    <h1><u>Ordered Items</u></h1>
+    <div class="table-container">
+        <table class="cart-table" id="carttable">
+        <thead>
+            <tr>
+                <th style="text-align: center;">SL.No.</th>
+                <th >Shipping ID</th>
+                <th>Product Name</th>
+                <th>Product ID</th>
+                <th>Date</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th style="text-align: center;">Edit</th>
+                <th style="text-align: center;">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cartItems; let i = index">
+                <td style="text-align: center;">{{ i + 1 }}</td>
+                <td>
+                    <span *ngIf="!item.isEditing">{{ item.shippingId  }}</span>
+                    <input *ngIf="item.isEditing" type="text" [(ngModel)]="item.shippingId">
+                </td>
+                
+                <td>
+                    <span *ngIf="!item.isEditing">{{ item.productName|uppercase }}</span>
+                    <input *ngIf="item.isEditing" type="text" [(ngModel)]="item.productName">
+                </td>
+                <td>{{ item.id }}</td>
+                <td>
+                    <span *ngIf="!item.isEditing">{{ item.date | date:'dd/MM/yyyy' }}</span>
+                    <input *ngIf="item.isEditing" type="date" [(ngModel)]="item.date" (change)="onDateChange(item)">
+                </td>
+                
+                <td>
+                    <span *ngIf="!item.isEditing">{{ item.quantity }}</span>
+                    <input *ngIf="item.isEditing" type="number" [(ngModel)]="item.quantity">
+                </td>
+                <td>{{ item.totalPrice | currency:'INR':'symbol':'1.2-2'}}</td>
+                <td style="text-align: center;">
+                    <button *ngIf="!item.isEditing" class="btn btn-primary" (click)="edit(item)">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button *ngIf="item.isEditing" class="btn btn-success" (click)="save(item)">
+                        <i class="fas fa-save"></i>
+                    </button>
+                </td>
+                <td style="text-align: center;">
+                    <button class="btn btn-danger" (click)="deleteCartItem(i)">
+                        <i class="fas fa-trash-alt"></i> 
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-dark" (click)="exportToExcel()">Export to Excel</button>
+</div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <h1><u>Shipping Details</u></h1>
+    <div class="shipping-table-container">
+        <table class="shipping-table" id="shipping-table">
+        <thead>
+            <tr>
+                <th style="width: 3%; text-align: center;">SL.No</th>
+                <th style="width: 8%; text-align: center;">Shipping ID</th>
+                <th style="width: 10%; color: #333;">User Name</th>
+                <th style="width: 19%;">Address</th>
+                <th style="width: 10%;">State</th>
+                <th style="width: 10%;">District</th>
+                <th style="width: 5%;">PIN</th>
+                <th style="width: 7%;">Phone</th>
+                <th style="width: 15%;">Email</th>
+                <th style="width: 16%;">Landmark</th>
+                <th style="width: 7%; text-align: center;">Edit</th>
+                <th style="width: 7%; text-align: center;">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let detail of shippingDetailsList; let i = index">
+                <td style="text-align: center;">{{ i + 1 }}</td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.shippingId}}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.shippingId">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.name | uppercase }}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.name">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.address | uppercase }}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.address">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.state | uppercase}}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.state">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.district | uppercase}}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.district">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.pin }}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.pin">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.phone }}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.phone">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.email }}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.email">
+                </td>
+                <td>
+                    <span *ngIf="!detail.isEditing2">{{ detail.landmark | uppercase}}</span>
+                    <input *ngIf="detail.isEditing2" type="text" [(ngModel)]="detail.landmark">
+                </td>
+                <td style="text-align: center;">
+                    <button *ngIf="!detail.isEditing2" class="btn btn-primary" (click)="editShippingDetail(i)" style="color: #fff; background-color: #007bff; border-color: #007bff;">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button *ngIf="detail.isEditing2" class="btn btn-success" (click)="saveShippingDetail(i)" style="color: #fff; background-color: #28a745; border-color: #28a745;">
+                        <i class="fas fa-save"></i>
+                    </button>
+                </td>
+                <td style="text-align: center;">
+                    <button class="delete-btn btn btn-danger" (click)="deleteShippingDetail(i)" style="color: #fff; background-color: #dc3545; border-color: #dc3545;">
+                        <i class="fas fa-trash-alt"></i> 
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-dark" (click)="exportShippingTableToExcel()">Export to Excel</button>
+</div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>

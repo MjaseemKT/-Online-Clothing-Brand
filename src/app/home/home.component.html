@@ -1,0 +1,118 @@
+
+<div class="sliding-container">
+  <img [src]="images3[currentIndex]" alt="Image"  style="width: 100%; height: 300px;">
+</div>
+
+
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div style="text-align: center;">
+        <img [src]="images[currentIndex]" width="800" height="460" alt="Image" style="object-fit: contain;">
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="paragraph">
+        <h3><i>"Diesel, a renowned name in the fashion industry, has been revolutionizing the world of denim and casual wear since its inception. With its edgy and innovative designs, Diesel has become synonymous with boldness, individuality, and self-expression. From iconic denim jeans to stylish apparel and accessories."</i></h3>
+      </div>
+      <div class="circle-container">
+        <div class="circle">
+            <img src="https://i.ebayimg.com/images/g/7aEAAOSweyZfJ4js/s-l1200.jpg" alt="Image 1" (click)="gotojeans()">
+            <h1 class="circle-text">Jeans</h1>
+        </div>
+        <div class="circle">
+          <img src="https://static.aceomni.cmsaceturtle.com/stag/product-image/aceomni/FinalBannerImages/New+folder+(2)/home-page-Shirt-575-x-650-copy.jpg" alt="Image 2" (click)="gotoshirt()">
+          <h1 class="circle-text">Shirt</h1>
+        </div>
+        <div class="circle">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2024/3/401414943/UY/BV/FJ/114122582/men-s-cargo-pants-500x500.jpg" alt="Image 3" (click)="gotopants()">
+          <h1 class="circle-text">Pants</h1>
+        </div>
+        <div class="circle">
+          <img src="https://images.bewakoof.com/t1080/men-s-white-t-shirt-105-1702967985-1.jpg" alt="Image 4" (click)="gototshirt()">
+          <h1 class="circle-text">T-Shirt</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+  
+<div class="row">
+  <div class="col">
+    <div class="paragraph">
+<h3><i>"every Diesel product exudes a sense of rebellious spirit and urban chic. With a commitment to quality craftsmanship and cutting-edge design, Diesel continues to push boundaries and inspire fashion enthusiasts worldwide. Whether it's the iconic Diesel logo or the distinctive washes and finishes, each garment tells a story of authenticity and authenticity. Embrace the Diesel lifestyle and make a statement that's uniquely yours."</i></h3>
+  </div>
+  <div class="circle-container">
+    <div class="circle">
+      <img src="https://www.biba.in/dw/image/v2/BKQK_PRD/on/demandware.static/-/Sites-biba-product-catalog/default/dw3ed21a76/images/aw23/skdjhilmil8883aw23grn_1.jpg?sw=502&sh=753" alt="Image 1" (click)="gotochuridar() ">
+      <h1 class="circle-text">Churidar</h1>
+    </div>
+    <div class="circle">
+      <img src="https://rukminim2.flixcart.com/image/850/1000/xif0q/sari/3/m/h/free-lichi-soft-silk-jacquard-woven-saree-tassel-embellished-original-imagfh7zzbwhcwxs.jpeg?q=90&crop=false" alt="Image 2" (click)=" gotosaree()">
+      <h1 class="circle-text">Saree</h1>
+    </div>
+    <div class="circle">
+      <img src="https://i.pinimg.com/originals/ce/98/f2/ce98f21db8f8c4c5c048aa5797e392a6.png" alt="Image 3" (click)="gotokurti()">
+      <h1 class="circle-text">Kurti</h1>
+    </div>
+    <div class="circle">
+      <img src="https://lauriebelles.com/cdn/shop/products/12_29_284_218x307_crop_center@2x.progressive.jpg?v=1688644472" alt="Image 4" (click)="gotoleggings()">
+      <h1 class="circle-text">Leggings</h1>
+    </div>
+  </div>
+</div>
+  <div class="col">
+    <div style="text-align: center;">
+      <div style="text-align: center;">
+        <img [src]="images2[currentIndex]" width="800" height="460" alt="Image" style="object-fit: contain;">
+      </div>    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container-fluid border">
+  <div class="row">
+    <div class="col-12">
+      <br>
+      <h1 style="text-align: center; font-weight: bold; font-family: Arial, sans-serif;"><u>New Arrivals</u></h1>
+      <br>
+      <div class="row">
+        <div class="col-2" id="image3">
+          <img src="/assets/images/saree1.jpg" alt="Image 1" style="width: 250px; height: 300px;" (click)="gotosaree()">
+          <h4 style="text-align: center;"> Pure Silk Bridal Saree</h4>
+          <h4 style="text-align: center;"> ₹ 2999.00</h4>
+        </div>
+        <div class="col-2" id="image3">
+          <img src="/assets/images/kurti3.jpeg" alt="Image 2" style="width: 250px; height: 300px;" (click)="gotokurti()">
+          <h4 style="text-align: center;">Charvi Superior Kurtis</h4>
+          <h4 style="text-align: center;"> ₹ 1999.00</h4>
+        </div>
+        <div class="col-2" id="image3">
+          <img src="/assets/images/tshert2.jpg" alt="Image 3" style="width: 250px; height: 300px;" (click)="gototshirt()">
+          <h4 style="text-align: center;"> Neck Blue T-shirt</h4>
+          <h4 style="text-align: center;"> ₹ 15999.00</h4>
+        </div>
+        <div class="col-2" id="image3">
+          <img src="assets/images/shirts 3.avif" alt="Image 4" style="width: 250px; height: 300px;" (click)="gotoshirt()">
+          <h4 style="text-align: center;"> Blue Jean Shirt</h4>
+          <h4 style="text-align: center;"> ₹ 1999.00</h4>
+        </div>
+        <div class="col-2" id="image3">
+          <img src="assets/images/jeans3.jpg" alt="Image 4" style="width: 250px; height: 300px;" (click)="gotojeans()">
+          <h4 style="text-align: center;">Blue Jean</h4>
+          <h4 style="text-align: center;"> ₹ 2999.00</h4>
+        </div>
+        <div class="col-2" id="image3">
+          <img src="/assets/images/pants2.avif" alt="Image 4" style="width: 250px; height: 300px;" (click)="gotopants()">
+          <h4 style="text-align: center;"> Black Pants</h4>
+          <h4 style="text-align: center;"> ₹ 999.00</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

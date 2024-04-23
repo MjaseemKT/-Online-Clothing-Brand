@@ -1,0 +1,38 @@
+
+<br><br><br>
+
+<div class="receipt" style="background-color: rgb(177, 162, 154); padding: 20px; width: 500px; margin: 0 auto;">
+    <div class="receipt-header" style="text-align: center; margin-bottom: 20px;">
+      <h1 style="margin: 0;"><u>SHIPPING DETAILS</u></h1>
+      <p style="margin: 5px 0;">Date: {{ currentDate |date:'dd/MM/yyyy'}}</p>
+    
+    </div>
+    <div class="receipt-items " >
+      <div class="receipt-item border-top" *ngFor="let item of receipt" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+        <div class="item-details" style="flex: 1;">
+           
+          
+          <div class="item-name" style="text-transform: uppercase;"><h3>PRODUCT NAME : &nbsp;{{ item.productName }}</h3></div>
+          <div><h3>SHIPPING ID : &nbsp;{{ item.shippingId }}</h3></div>
+        </div>
+        <div class="item-quantity" style="margin-right: 10px;"><h3>x {{ item.quantity }}</h3></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="item-price"> <h3>{{ item.totalPrice.toFixed(2) | currency:'INR':'symbol':'1.2-2' }}</h3></div><br><br><br><br>
+      </div><br><br>
+    </div>
+   
+    
+    <div class="receipt-total" style="margin-top: 20px; text-align: right;">
+      <h2  style="margin: 0; ">Shipping :₹ 20.00</h2>
+      <h2 style="margin: 0; font-weight: bold;">Total: {{ total | currency:'INR':'symbol':'1.2-2' }}</h2>
+
+    </div><br>
+    <button class="btn btn-dark"  (click)=" clearReceipt()">OK</button>
+
+    
+  </div>
+  
+  
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br><br>
+

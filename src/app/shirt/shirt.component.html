@@ -1,0 +1,108 @@
+
+
+
+<div class="circle-container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-2">
+            <div class="circle pants" (click)="gotopants()">
+                <span>Pants</span>
+            </div>
+        </div>
+        <div class="col-2" >
+            <div class="circle jeans" (click)="gotojeans()">
+                <span>Jeans</span>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="circle t-shirt" (click)="gototshirt()">
+                <span>T-shirt</span>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="circle shirt" (click)="gotoshirt()">
+                <span>Shirt</span>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="product-display-section">
+    <div class="product-item border mt-5 p-2" *ngFor="let product of shirt">
+        <div class="product-image">
+            <div *ngFor="let img of product.images">
+                <img [src]="img" alt="Image" style="width: 400px; height: 300px;" (click)="openProductDetailsDialog(product)">
+            </div>
+            <button class="wishlist-btn" (click)="handleWishlistClick($event, product)"
+            [ngClass]="{ 'wishlist-active': product.inWishlist }"
+            style="width: 40px; height: 40px; border-radius: 50%; background-color: white; border: 1px solid #ccc; display: flex; justify-content: center; align-items: center;">
+        <i class="fas fa-heart"></i>
+    </button>
+    
+        </div>
+        <h3 class="product-name" style="text-align: center;">{{ product.name }}</h3>
+        <div class="product-details border-top ">
+            <div class="row">
+                <div class="col">
+                    <p class="product-color" style="color: black;">Color: {{ product.color }}</p>
+                </div>
+            
+                <div class="col">
+                    <p class="product-color" style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;size: {{ product.size}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="mrp-price"><span class="price">{{ product.MRPPrice | currency:'INR':'symbol':'1.2-2'}}</span></p>
+                </div>
+                <div class="col"></div>
+                <div class="col">
+                    <p class="selling-price" style="color: black;"><span class="price"><b>{{ product.offerPrice | currency:'INR':'symbol':'1.2-2'}}</b></span></p>
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-danger"
+                    [ngClass]="{ 'added-to-cart': product.inCartlist }"
+                    (click)="addtocart($event, product)">
+                    <i class="fas fa-shopping-cart"></i>&nbsp;ADD TO CART
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br>
+<div class="row">
+    <div class="col">
+        <div class="paragraph">
+            <h3><i>"Shirts, exuding a sense of elegance and sophistication. With a commitment to quality craftsmanship and timeless design, our collection pushes boundaries and inspires fashion enthusiasts worldwide. Whether it's the classic patterns or the modern styles, each shirt tells a story of authenticity and individuality. Embrace the shirt style and make a statement that's uniquely yours."</i></h3>
+        </div>
+    </div>
+    <div class="col">
+        <div class="image-container">
+            <img src="https://static1.squarespace.com/static/54661df4e4b0c1af99306b69/551eb9cce4b0d9e1728cc4fc/6402f912fe7b516ade97d874/1677917067057/DSCF4430.jpg?format=1500w" alt="Image">
+        </div>
+    </div>
+</div>
+
+
+

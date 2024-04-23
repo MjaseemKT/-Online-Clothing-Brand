@@ -1,0 +1,176 @@
+.product-display-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    position: relative;
+    width: calc(20% - 20px); 
+    margin: 10px;
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.wishlist-btn.clicked {
+    color: red;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.mrp-price, .selling-price, .product-color {
+    margin-bottom: 5px;
+    color: #888;
+}
+
+.wishlist-active {
+    color: red;
+}
+
+.mrp-price {
+    text-decoration: line-through;
+}
+
+.rupee-icon {
+    margin-right: 3px; 
+}
+
+
+.added-to-cart {
+    background-color: rgb(31, 34, 31); 
+    color: white; 
+}
+
+
+
+.circle-container {
+    margin-top: 20px; 
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.5s ease; 
+    cursor: pointer;
+}
+
+.circle:hover {
+    border-color: #333;
+    transform: scale(1.1);
+}
+
+.circle span {
+    font-size: 14px;
+    color: #fd0101;
+}
+
+
+.circle.pants {
+    background-color: #000000; 
+}
+
+.circle.jeans {
+    background-color: #000000; 
+}
+
+.circle.t-shirt {
+    background-color: #0d0e0d; 
+}
+
+.circle.shirt {
+    background-color: #1b1b1b; 
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.circle-container .circle {
+    animation: fadeInScale 0.5s ease-in-out forwards; 
+}
+
+.product-item {
+    position: relative;
+    width: calc(20% - 20px); 
+    margin: 20px;
+    overflow: hidden;
+    border: 5px solid #ccc; 
+    border-radius: 10px;
+    background-color: #fff; 
+    transition: box-shadow 0.3s ease; 
+}
+
+.product-item:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.paragraph {
+    padding: 20px;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; 
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h3 {
+    font-size: 24px; 
+    font-style: italic; 
+    color: #333; 
+    text-align: justify; 
+    margin-bottom: 20px;
+}

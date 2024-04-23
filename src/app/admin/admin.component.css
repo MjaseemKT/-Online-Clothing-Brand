@@ -1,0 +1,166 @@
+
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+
+.w3-sidebar {width: 120px;background: #000000;}
+
+#main {margin-left: 120px}
+
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+
+
+form {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+}
+
+
+.col-form-label {
+    font-weight: bold;
+}
+
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+
+.form-control-file {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+
+.btn-primary {
+    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+}
+
+
+.form-group.row > .col {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+    .form-group.row > .col {
+        display: flex;
+        align-items: center;
+    }
+
+    .form-group.row > .col > * {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .form-group.row > .col:last-child > * {
+        margin-right: 0;
+    }
+}
+
+
+
+
+
+
+.table-container {
+    margin-top: 20px;
+    
+  }
+  
+  .table {
+    
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .table td img {
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .table td button {
+    margin-right: 5px;
+  }
+  
+
+
+
+
+
+  .w3-sidebar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100px;
+    height: 100%; 
+    background-color: #202222; 
+    padding-top: 100px; 
+    overflow-x: hidden;
+  }
+
+
+
+  .image-container {
+    width: 100px; 
+    height: 100px; 
+    overflow: hidden; 
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+
+ 
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 10px; 
+}
+
+.file-input-wrapper input[type="file"] {
+  font-size: 14px; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.file-input-wrapper label {
+  cursor: pointer;
+  display: block;
+  padding: 8px 12px;
+  background-color: #007bff; 
+  color: #fff; 
+  border-radius: 4px;
+}
+
+.file-input-wrapper label:hover {
+  background-color: #0056b3;
+}
+
+.file-input-wrapper small {
+  margin-top: 5px; 
+  display: block;
+  color: #6c757d; 
+}
