@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   filteredProducts: any[] = [];
   wish: any[] = [];
   cart: any[] = [];
-
+ 
 
   constructor(private router: Router, private dialog: MatDialog) { }
 
@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
     this.loadFormData();
   }
 
- 
 
 
 
@@ -75,6 +74,9 @@ export class AppComponent implements OnInit {
     });
   }
 
+
+
+ 
   // addToWishlist(item: any): void {
     
   //   this.wish.push(item);
@@ -111,3 +113,4 @@ export class AppComponent implements OnInit {
     
   // }
 }
+

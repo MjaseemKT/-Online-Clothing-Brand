@@ -96,4 +96,8 @@ export class HomeComponent {
   gotochuridar(): void {
     this.router.navigate(['/churidar']); 
   }
+
+  gotomen(): void {
+    this.router.navigate(['/men']); 
+  }
 }

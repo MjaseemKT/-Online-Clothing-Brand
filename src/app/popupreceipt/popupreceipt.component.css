@@ -2,7 +2,7 @@
     width: 300px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #007bff; /* Blue border */
+    border: 2px solid #007bff; 
     border-radius: 10px;
     font-family: Arial, sans-serif;
   }
@@ -13,7 +13,7 @@
   }
   
   .receipt-items {
-    border-bottom: 1px dashed #333; /* Darker dashed line */
+    border-bottom: 1px dashed #333;
     margin-bottom: 20px;
   }
   

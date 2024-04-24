@@ -26,7 +26,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { OrderdetailsComponent } from './orderdetails/orderdetails.component';
 import { AboutComponent } from './about/about.component';
 import { PopupreceiptComponent } from './popupreceipt/popupreceipt.component';
-// import { CountryPipe } from './country.pipe';
 
 
 @NgModule({
@@ -51,7 +50,7 @@ import { PopupreceiptComponent } from './popupreceipt/popupreceipt.component';
     OrderdetailsComponent,
     AboutComponent,
     PopupreceiptComponent,
-    // CountryPipe,
+    
    
 
   ],

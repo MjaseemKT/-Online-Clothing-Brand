@@ -70,10 +70,8 @@ export class ChuridarComponent {
       list.push(product);
     } else {
      
-      list = list.filter((item: any) => item.name !== product.name);
+      list = list.filter((item: any) => item.id !== product.id);
     }
-
-   
     localStorage.setItem(key, JSON.stringify(list));
   }
 
